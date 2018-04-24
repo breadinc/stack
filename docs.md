@@ -7,7 +7,7 @@ and a bastion node that enables you to access all instances.
 Usage:
 
     module "stack" {
-      source      = "github.com/segmentio/stack"
+      source      = "github.com/breadinc/stack"
       name        = "mystack"
       environment = "prod"
     }
@@ -102,7 +102,7 @@ If you ever need to access an instance directly, you can do it by "jumping throu
 Usage:
 
     module "bastion" {
-      source            = "github.com/segmentio/stack/bastion"
+      source            = "github.com/breadinc/stack/bastion"
       region            = "us-west-2"
       security_groups   = "sg-1,sg-2"
       vpc_id            = "vpc-12"
@@ -141,7 +141,7 @@ a helper module for the stack.
 Usage:
 
     module "defaults" {
-      source = "github.com/segmentio/stack/defaults"
+      source = "github.com/breadinc/stack/defaults"
       region = "us-east-1"
       cidr   = "10.0.0.0/16"
     }
@@ -219,7 +219,7 @@ ECS Cluster creates a cluster with the following features:
 Usage:
 
      module "cdn" {
-       source               = "github.com/segmentio/stack/ecs-cluster"
+       source               = "github.com/breadinc/stack/ecs-cluster"
        environment          = "prod"
        name                 = "cdn"
        vpc_id               = "vpc-id"
@@ -414,7 +414,7 @@ elb and a route53 record under the local service zone (see the dns module).
 Usage:
 
      module "auth_service" {
-       source    = "github.com/segmentio/stack/service"
+       source    = "github.com/breadinc/stack/service"
        name      = "auth-service"
        image     = "auth-service"
        cluster   = "default"
@@ -466,7 +466,7 @@ The task module creates an ECS task definition.
 Usage:
 
     module "nginx" {
-      source = "github.com/segmentio/stack/task"
+      source = "github.com/breadinc/stack/task"
       name   = "nginx"
       image  = "nginx"
     }
@@ -529,7 +529,7 @@ it provides a __public__ ELB instead.
 Usage:
 
      module "auth_service" {
-       source    = "github.com/segmentio/stack/service"
+       source    = "github.com/breadinc/stack/service"
        name      = "auth-service"
        image     = "auth-service"
        cluster   = "default"
@@ -584,7 +584,7 @@ The worker module creates an ECS service that has no ELB attached.
 Usage:
 
     module "my_worker" {
-      source       = "github.com/segmentio/stack"
+      source       = "github.com/breadinc/stack"
       environment  = "prod"
       name         = "worker"
       image        = "worker"

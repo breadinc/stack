@@ -1,4 +1,4 @@
-# Segment Stack [![CircleCI](https://circleci.com/gh/segmentio/stack.svg?style=shield&circle-token=21d1df0dfd7e405582403f65cd1a270f9f52d7a4)](https://circleci.com/gh/segmentio/stack)
+# Segment Stack [![CircleCI](https://circleci.com/gh/breadinc/stack.svg?style=shield&circle-token=21d1df0dfd7e405582403f65cd1a270f9f52d7a4)](https://circleci.com/gh/breadinc/stack)
 
 [terraform]: https://terraform.io
 [remote-state]: https://www.terraform.io/docs/commands/remote-config.html
@@ -33,7 +33,7 @@ The easiest way to get the Stack up and running is by creating a Terraform defin
 named `terraform.tf`:
 ```hcl
 module "stack" {
-  source      = "github.com/segmentio/stack"
+  source      = "github.com/breadinc/stack"
   environment = "prod"
   key_name    = "my-key-name"
   name        = "my-app"
@@ -61,7 +61,7 @@ Here's a sample service definition, try adding it to your `terraform.tf` file.
 ```hcl
 module "nginx" {
   # this sources from the "stack//service" module
-  source          = "github.com/segmentio/stack//service"
+  source          = "github.com/breadinc/stack//service"
   name            = "my-app"
   image           = "nginx"
   port            = 80
@@ -224,7 +224,7 @@ You can reference modules individually by name:
 
 ```hcl
 module "vpc" {
-  source             = "github.com/segmentio/stack//vpc"
+  source             = "github.com/breadinc/stack//vpc"
   name               = "${var.name}"
   environment        = "${var.environment}"
   cidr               = "${var.cidr}"

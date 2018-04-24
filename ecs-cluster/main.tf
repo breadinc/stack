@@ -9,7 +9,7 @@
  * Usage:
  *
  *      module "cdn" {
- *        source               = "github.com/segmentio/stack/ecs-cluster"
+ *        source               = "github.com/breadinc/stack/ecs-cluster"
  *        environment          = "prod"
  *        name                 = "cdn"
  *        vpc_id               = "vpc-id"

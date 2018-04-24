@@ -6,7 +6,7 @@
  * Usage:
  *
  *    module "stack" {
- *      source      = "github.com/segmentio/stack"
+ *      source      = "github.com/breadinc/stack"
  *      name        = "mystack"
  *      environment = "prod"
  *    }

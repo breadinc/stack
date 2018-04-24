@@ -7,7 +7,7 @@
  * Usage:
  *
  *     module "defaults" {
- *       source = "github.com/segmentio/stack/defaults"
+ *       source = "github.com/breadinc/stack/defaults"
  *       region = "us-east-1"
  *       cidr   = "10.0.0.0/16"
  *     }

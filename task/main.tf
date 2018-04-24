@@ -4,7 +4,7 @@
  * Usage:
  *
  *     module "nginx" {
- *       source = "github.com/segmentio/stack/task"
+ *       source = "github.com/breadinc/stack/task"
  *       name   = "nginx"
  *       image  = "nginx"
  *     }
