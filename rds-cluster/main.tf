@@ -29,6 +29,16 @@ variable "availability_zones" {
   type        = "list"
 }
 
+variable "database_engine_version" {
+  description = "Verison of the database"
+  default = "9.6.8"
+}
+
+variable "database_engine" {
+  description = "The database engine type aurora,aurora-mysql,aurora-postgresql"
+  default = "aurora-postgresql"
+}
+
 variable "database_name" {
   description = "The database name"
 }
@@ -125,6 +135,8 @@ resource "aws_rds_cluster_instance" "cluster_instances" {
 
 resource "aws_rds_cluster" "main" {
   cluster_identifier        = "${var.name}"
+  engine                    = "${var.database_engine}"
+  engine_version            = "${var.database_engine_version}"
   availability_zones        = ["${var.availability_zones}"]
   database_name             = "${var.database_name}"
   master_username           = "${var.master_username}"
